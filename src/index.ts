@@ -28,7 +28,7 @@ REPOSITORIES.forEach((repository) => {
       console.log('Downloaded repository ' + repository);
 
       const archive = path.normalize(`${process.cwd()}/${repository}.zip`);
-      const output = path.normalize(`${process.cwd()}/${repository}`);
+      const output = path.normalize(`${process.cwd()}/`);
 
       console.log(`Extracting file ${archive}`);
 

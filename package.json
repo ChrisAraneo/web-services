@@ -1,6 +1,6 @@
 {
   "name": "web-services",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "keywords": [],
   "homepage": "https://github.com/ChrisAraneo/web-services#readme",
@@ -16,10 +16,14 @@
   "main": "index.js",
   "scripts": {
     "build": "tsup src/**/*.ts",
+    "build:all": "cd minecraft-players-number-notifier-master && npm run build && cd ../email-service-master && npm run build",
     "chores": "npm run lint && npm run format",
     "format": "sort-package-json && prettier --write \"**/*.{ts,js,json}\" && node scripts/sort-pattern-files .gitignore .prettierignore",
+    "install:all": "npm run build && node dist/index.js && cd minecraft-players-number-notifier-master && npm i && cd ../email-service-master && npm i",
     "lint": "eslint --fix",
-    "start": "npm run build && node dist/index.js",
+    "start:all": "concurrently \"npm run start:mpnn\" \"npm run start:es\"",
+    "start:es": "cd email-service-master && npm run start",
+    "start:mpnn": "cd minecraft-players-number-notifier-master && npm run start",
     "stryker": "npx stryker run",
     "test": "jest"
   },

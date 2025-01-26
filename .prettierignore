@@ -1,8 +1,8 @@
 .stryker-tmp
 coverage
 dist
-email-service
-minecraft-players-number-notifier
+email-service-master
+minecraft-players-number-notifier-master
 node_modules
 package-lock.json
 reports

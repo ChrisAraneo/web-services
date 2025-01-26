@@ -2,7 +2,7 @@
 *.zip
 coverage
 dist
-email-service
-minecraft-players-number-notifier
+email-service-master
+minecraft-players-number-notifier-master
 node_modules
 reports
