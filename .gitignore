@@ -1,5 +1,8 @@
 .stryker-tmp
+*.zip
 coverage
 dist
+email-service
+minecraft-players-number-notifier
 node_modules
 reports
