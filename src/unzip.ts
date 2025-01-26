@@ -12,14 +12,10 @@ export async function unzip(archive: string, output: string) {
       resolve();
     });
 
-    unzipper.on('progress', function (fileIndex, fileCount) {
-      console.log('Extracted file ' + (fileIndex + 1) + ' of ' + fileCount);
-    });
-
     unzipper.extract({
       path: output,
-      filter: function (file) {
-        return file.type !== 'SymbolicLink';
+      filter: (file: unknown) => {
+        return file['type'] !== 'SymbolicLink';
       },
     });
   });
