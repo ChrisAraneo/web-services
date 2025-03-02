@@ -1,6 +1,6 @@
 {
   "name": "web-services",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "keywords": [],
   "homepage": "https://github.com/ChrisAraneo/web-services#readme",
@@ -16,21 +16,15 @@
   "main": "index.js",
   "scripts": {
     "build": "tsup src/**/*.ts",
-    "build:all": "cd minecraft-players-number-notifier-master && npm run build && cd ../email-service-master && npm run build",
-    "build:es": "cd email-service-master && npm run build && cd ..",
-    "build:mpnn": "cd email-service-master && npm run build && cd ..",
     "chores": "npm run lint && npm run format",
     "format": "sort-package-json && prettier --write \"**/*.{ts,js,json}\" && node scripts/sort-pattern-files .gitignore .prettierignore",
-    "install:all": "npm run build && node dist/index.js && cd minecraft-players-number-notifier-master && npm i && cd ../email-service-master && npm i",
     "lint": "eslint --fix",
-    "start:all": "concurrently \"npm run start:mpnn\" \"npm run start:es\"",
-    "start:es": "cd email-service-master && npm run start",
-    "start:mpnn": "cd minecraft-players-number-notifier-master && npm run start",
+    "start": "npm run build && node dist/index",
     "stryker": "npx stryker run",
     "test": "jest"
   },
   "dependencies": {
-    "decompress-zip": "^0.3.3"
+    "@chris.araneo/email-service": "0.0.1"
   },
   "devDependencies": {
     "@stryker-mutator/jest-runner": "^8.6.0",
@@ -39,7 +33,6 @@
     "@types/node": "^22.9.0",
     "@typescript-eslint/eslint-plugin": "^8.14.0",
     "@typescript-eslint/parser": "^8.14.0",
-    "concurrently": "^9.1.2",
     "eslint": "^9.14.0",
     "eslint-plugin-jsonc": "^2.18.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",

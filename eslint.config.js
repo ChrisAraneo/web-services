@@ -32,8 +32,6 @@ module.exports = tseslint.config(
       'coverage',
       'package.json',
       'package-lock.json',
-      'email-service-master',
-      'minecraft-players-number-notifier-master',
     ],
   },
 );
