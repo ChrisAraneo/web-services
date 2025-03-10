@@ -9,7 +9,7 @@ import Express from 'express';
   const healthCheckService = new HealthCheckService(logger);
   const app = Express();
 
-  app.get('/email', (request, response) =>
+  app.post('/email', (request, response) =>
     emailService.handleRequest(request, response),
   );
   app.get('/health', (request, response) =>
