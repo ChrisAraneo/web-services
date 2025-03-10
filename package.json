@@ -1,6 +1,6 @@
 {
   "name": "web-services",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "keywords": [],
   "homepage": "https://github.com/ChrisAraneo/web-services#readme",
@@ -24,13 +24,15 @@
     "test": "jest"
   },
   "dependencies": {
-    "@chris.araneo/email-service": "0.0.3",
-    "@chris.araneo/health-check": "0.0.2",
-    "@chris.araneo/logger": "^0.0.2"
+    "@chris.araneo/email-service": "0.0.6",
+    "@chris.araneo/health-check": "0.0.3",
+    "@chris.araneo/logger": "^0.0.2",
+    "express": "^4.21.2"
   },
   "devDependencies": {
     "@stryker-mutator/jest-runner": "^8.6.0",
     "@stryker-mutator/typescript-checker": "^8.6.0",
+    "@types/express": "^5.0.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.9.0",
     "@typescript-eslint/eslint-plugin": "^8.14.0",

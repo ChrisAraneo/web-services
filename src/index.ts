@@ -1,11 +1,20 @@
 import { EmailService } from '@chris.araneo/email-service';
 import { HealthCheckService } from '@chris.araneo/health-check';
 import { Logger } from '@chris.araneo/logger';
+import Express from 'express';
 
 (() => {
   const logger = new Logger('debug');
+  const emailService = new EmailService(logger);
+  const healthCheckService = new HealthCheckService(logger);
+  const app = Express();
 
-  new EmailService('/email', 5050, logger).listen();
+  app.get('/email', (request, response) =>
+    emailService.handleRequest(request, response),
+  );
+  app.get('/health', (request, response) =>
+    healthCheckService.handleRequest(request, response),
+  );
 
-  new HealthCheckService('/health', 9339, logger).listen();
+  app.listen(5050);
 })();
