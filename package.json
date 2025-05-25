@@ -1,6 +1,6 @@
 {
   "name": "web-services",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "",
   "keywords": [],
   "homepage": "https://github.com/ChrisAraneo/web-services#readme",
@@ -47,5 +47,6 @@
     "ts-jest": "^29.2.5",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.14.0"
-  }
+  },
+  "type": "module"
 }
