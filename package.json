@@ -1,6 +1,6 @@
 {
   "name": "web-services",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "",
   "keywords": [],
   "homepage": "https://github.com/ChrisAraneo/web-services#readme",
@@ -24,7 +24,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@chris.araneo/email-service": "0.0.12",
+    "@chris.araneo/email-service": "0.0.13",
     "@chris.araneo/health-check": "0.0.3",
     "@chris.araneo/logger": "0.0.2",
     "express": "^4.21.2"

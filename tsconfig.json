@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowUnreachableCode": true,
     "esModuleInterop": true,
-    "module": "commonjs",
+    "module": "AMD",
     "moduleResolution": "node",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
