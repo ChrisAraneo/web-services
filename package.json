@@ -1,6 +1,6 @@
 {
   "name": "web-services",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "",
   "keywords": [],
   "homepage": "https://github.com/ChrisAraneo/web-services#readme",
@@ -15,10 +15,11 @@
   "author": "Krzysztof Pająk (Chris Araneo) <chris.araneo@gmail.com>",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "chores": "npm run lint && npm run format",
     "format": "sort-package-json && prettier --write \"**/*.{ts,js,json}\" && node scripts/sort-pattern-files .gitignore .prettierignore",
     "lint": "eslint --fix",
-    "start": "ts-node src/index.ts",
+    "start": "npm run build && node dist/index",
     "stryker": "npx stryker run",
     "test": "jest"
   },
@@ -44,7 +45,6 @@
     "prettier": "^3.3.3",
     "sort-package-json": "^2.14.0",
     "ts-jest": "^29.2.5",
-    "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.14.0"
   }
